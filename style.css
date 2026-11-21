@@ -1,0 +1,65 @@
+body {
+  min-height: 100vh;
+  background: linear-gradient(to right, #8c5a3c, #c08552);
+  color: #4b2e2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background-color: #fff8f0;
+  border-radius: 10px;
+  width: 500px;
+  box-shadow: #4b2e2b 0px 7px 29px 0px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.bbh-bogle-regular {
+  font-family: "BBH Bogle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.event {
+  margin: 30px;
+}
+
+.label-input {
+  margin: 10px;
+}
+
+input,
+textarea {
+  border-radius: 4px;
+  border: 2px solid #4b2e2b;
+  width: 100%;
+  padding: 6px;
+}
+
+input {
+  height: 20px;
+}
+
+label {
+  display: block;
+}
+
+button {
+  color: #fff8f0;
+  border: 2px solid #4b2e2b;
+  width: 100%;
+  padding: 6px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-left: 6px;
+  background: #8c5a3c;
+}
+
+button:hover {
+  background: #c08552;
+  transition: background-color 0.3s ease;
+}

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BBH+Bogle&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <form>
+        <div><h1 class="bbh-bogle-regular">Create an Event Invite</h1></div>
+        <div class="event">
+          <div class="label-input">
+            <label for="event-name">Event Name</label>
+            <input
+              type="text"
+              name=""
+              id="event-name"
+              placeholder="Ex: Keralam JS Meetup"
+              required
+            />
+          </div>
+          <div class="label-input">
+            <label for="event-date">Event Date</label>
+            <input type="date" name="" id="event-date" required />
+          </div>
+          <div class="label-input">
+            <label for="start-time">Start Time</label>
+            <input type="time" required />
+          </div>
+          <div class="label-input">
+            <label for="end-time">End Time</label>
+            <input type="time" name="" id="end-time" required />
+          </div>
+          <div class="label-input">
+            <label for="event-description">Event Description</label
+            ><textarea
+              rows="2"
+              name=""
+              id="event-description"
+              placeholder="Brief Description of the Event"
+              required
+            ></textarea>
+          </div>
+          <div class="label-input">
+            <label for="event-location">Event Location</label
+            ><input
+              type="text"
+              name=""
+              id="event-location"
+              placeholder="Location of the Event"
+              required
+            />
+          </div>
+          <div class="label-input">
+            <button type="submit">Create Event</button>
+          </div>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
