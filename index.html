@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Event Invite</title>
     <link rel="stylesheet" href="style.css" />
     <script defer src="main.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,7 +14,7 @@
     />
   </head>
   <body>
-    <main>
+    <section class="form">
       <form id="event-form" novalidate>
         <div><h1 class="bbh-bogle-regular">Create an Event Invite</h1></div>
         <div class="event">
@@ -22,7 +22,6 @@
             <label for="event-name">Event Name</label>
             <input
               type="text"
-              name=""
               id="event-name"
               placeholder="Ex: Keralam JS Meetup"
               required
@@ -30,21 +29,20 @@
           </div>
           <div class="label-input">
             <label for="event-date">Event Date</label>
-            <input type="date" name="" id="event-date" required />
+            <input type="date" id="event-date" required />
           </div>
           <div class="label-input">
             <label for="start-time">Start Time</label>
-            <input type="time" required />
+            <input type="time" id="start-time" required />
           </div>
           <div class="label-input">
             <label for="end-time">End Time</label>
-            <input type="time" name="" id="end-time" required />
+            <input type="time" id="end-time" required />
           </div>
           <div class="label-input">
             <label for="event-description">Event Description</label
             ><textarea
               rows="2"
-              name=""
               id="event-description"
               placeholder="Brief Description of the Event"
               required
@@ -54,7 +52,6 @@
             <label for="event-location">Event Location</label
             ><input
               type="text"
-              name=""
               id="event-location"
               placeholder="Location of the Event"
               required
@@ -71,6 +68,27 @@
           <p class="validate">Please fill in all fields</p>
         </div>
       </div>
-    </main>
+    </section>
+    <section class="invitation">
+      <p class="bbh-bogle-regular" id="heading">YOU ARE INVITED</p>
+      <p id="join">TO JOIN THE</p>
+      <p id="invite-name" class="bbh-bogle-regular">adfadf</p>
+      <p id="invite-date">adsfadf</p>
+      <p id="invite-schedule">adfadf</p>
+      <p id="invite-location">adfadfa</p>
+      <p id="invite-description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+        veritatis quidem excepturi cupiditate impedit consectetur suscipit harum
+        magni deleniti aspernatur expedita modi facere doloribus est molestias
+        assumenda, voluptatibus reiciendis fuga officiis! Quos libero sunt animi
+        recusandae nobis ipsa consequuntur quaerat deserunt nulla saepe dolore
+        architecto nam quo iusto, harum vero dicta debitis autem provident
+        blanditiis aut neque voluptates ut consequatur. Vero quo, quod debitis
+        nihil tempore perspiciatis facilis earum, aspernatur dolores ea,
+        recusandae porro beatae. Perspiciatis perferendis provident amet ea
+        laborum soluta aliquid exercitationem reiciendis vitae omnis, doloribus
+        ad ut!
+      </p>
+    </section>
   </body>
 </html>

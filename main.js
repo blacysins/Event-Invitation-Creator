@@ -1,29 +1,33 @@
-const form = document.querySelector("#event-form button");
+const sectionForm = document.querySelector(".form");
+const sectionInvitation = document.querySelector(".invitation");
+const form = document.querySelector("#event-form");
 const backgroundOverlay = document.querySelector("#background-overlay");
 const closeBtn = document.querySelector("#closeBtn");
 
-form.addEventListener("click", (e) => {
-  const fields = document.querySelectorAll("input, textarea");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const fields = form.querySelectorAll("input, textarea");
 
   let hasEmpty = false;
   fields.forEach((field) => {
-    if (field.value.trim() == "") {
+    if (field.value.trim() === "") {
       hasEmpty = true;
     }
   });
 
   if (hasEmpty) {
-    e.preventDefault();
     backgroundOverlay.classList.add("show");
+  } else {
   }
 });
 
-closeBtn.addEventListener("click", (e) => {
+closeBtn.addEventListener("click", () => {
   backgroundOverlay.classList.remove("show");
 });
 
 backgroundOverlay.addEventListener("click", (e) => {
-  if (e.target == backgroundOverlay) {
+  if (e.target === backgroundOverlay) {
     backgroundOverlay.classList.remove("show");
   }
 });

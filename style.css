@@ -1,3 +1,9 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 body {
   min-height: 100vh;
   background: linear-gradient(to right, #8c5a3c, #c08552);
@@ -7,15 +13,63 @@ body {
   align-items: center;
 }
 
-main {
+.form {
   background-color: #fff8f0;
   border-radius: 10px;
   width: 500px;
   box-shadow: #4b2e2b 0px 7px 29px 0px;
 }
 
+.invitation {
+  background-color: #fff8f0;
+  border: 2px solid #4b2e2b;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: #4b2e2b 0px 7px 29px 0px;
+  width: 400px;
+}
+
+#join {
+  font-style: italic;
+  font-weight: 100;
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+#heading,
+#invite-name {
+  font-weight: 500;
+  font-size: 35px;
+  padding: 0;
+  margin: 0;
+}
+
+#heading {
+  margin-top: 30px;
+}
+
+#invite-date,
+#invite-schedule,
+#invite-location,
+#invite-description {
+  text-align: left;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#invite-description {
+  margin-bottom: 30px;
+}
+
 h1 {
   text-align: center;
+}
+
+.playwrite-au-sa-guides-regular {
+  font-family: "Playwrite AU SA Guides", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .bbh-bogle-regular {
@@ -37,11 +91,7 @@ textarea {
   border-radius: 4px;
   border: 2px solid #4b2e2b;
   width: 100%;
-  padding: 6px;
-}
-
-input {
-  height: 20px;
+  padding: 8px;
 }
 
 label {
@@ -55,13 +105,14 @@ button {
   padding: 6px;
   border-radius: 20px;
   margin-top: 10px;
-  margin-left: 6px;
+  transition: background-color 0.3s ease;
+
   background: #8c5a3c;
+  cursor: pointer;
 }
 
 button:hover {
   background: #c08552;
-  transition: background-color 0.3s ease;
 }
 
 .background-overlay {
@@ -107,4 +158,5 @@ button:hover {
   right: 20px;
   cursor: pointer;
   font-size: 20px;
+  color: #fff8f0;
 }
