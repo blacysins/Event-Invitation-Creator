@@ -63,3 +63,48 @@ button:hover {
   background: #c08552;
   transition: background-color 0.3s ease;
 }
+
+.background-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+  z-index: 1000;
+}
+
+.background-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.pop-up {
+  position: relative;
+  background: linear-gradient(to right, #8c5a3c, #c08552);
+  text-align: center;
+  box-shadow: #4b2e2b 0px 7px 29px 0px;
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.validate {
+  font-size: large;
+  color: #fff8f0;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 20px;
+}

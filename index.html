@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="main.js"></script>
+    <script defer src="main.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,7 +15,7 @@
   </head>
   <body>
     <main>
-      <form>
+      <form id="event-form" novalidate>
         <div><h1 class="bbh-bogle-regular">Create an Event Invite</h1></div>
         <div class="event">
           <div class="label-input">
@@ -65,6 +65,12 @@
           </div>
         </div>
       </form>
+      <div class="background-overlay" id="background-overlay">
+        <div class="pop-up">
+          <span class="close" id="closeBtn">&#10006;</span>
+          <p class="validate">Please fill in all fields</p>
+        </div>
+      </div>
     </main>
   </body>
 </html>
