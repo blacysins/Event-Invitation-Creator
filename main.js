@@ -4,6 +4,24 @@ const form = document.querySelector("#event-form");
 const backgroundOverlay = document.querySelector("#background-overlay");
 const closeBtn = document.querySelector("#closeBtn");
 
+function formatDate(dateString) {
+  const date = new Date(dateString + "T00:00:00");
+  return date.toLocaleDateString("en-IN", {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+}
+
+function formatTime(timeString) {
+  let [hours, minutes] = timeString.split(":");
+  let hour = Number(hours);
+  let period = hour >= 12 ? "PM" : "AM";
+  hour = hour % 12 || 12;
+  return hour + ":" + minutes + " " + period;
+}
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -36,8 +54,9 @@ form.addEventListener("submit", (e) => {
   const inviteLocation = document.querySelector("#invite-location");
   const inviteDescription = document.querySelector("#invite-description");
   inviteName.textContent = eventName;
-  inviteDate.textContent = eventDate;
-  inviteSchedule.textContent = startTime + " - " + endTime;
+  inviteDate.textContent = formatDate(eventDate);
+  inviteSchedule.textContent =
+    formatTime(startTime) + " - " + formatTime(endTime);
   inviteLocation.textContent = `📍 ${eventLocation}`;
   inviteDescription.textContent = eventDescription;
 
